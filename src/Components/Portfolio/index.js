@@ -26,8 +26,8 @@ const Portfolio = () => {
                             <li><abbr title='Technologies Used'>Styled-Components</abbr></li>
                         </TechUsed>
                         <ButtonContainer>
-                          <PrimaryButton>View Live <img alt="" src={globe}/></PrimaryButton>
-                          <SecButton>Source Code <img alt="" src={code}/></SecButton>
+                          <PrimaryButton href='https://jaheim-brown-portfolio.hostman.site/' target='_blank'>View Live <img alt="" src={globe}/></PrimaryButton>
+                          <SecButton href='https://github.com/KxngJ/Jaheim-Brown-Portfolio' target='_blank'>Source Code <img alt="" src={code}/></SecButton>
                         </ButtonContainer>
                     </ProjectDescription>
                 </Project>
