@@ -173,6 +173,8 @@ export const PrimaryButton = styled.a`
   background-color: ${BgColor};
   box-shadow: 6px 6px 25px rgba(0, 0, 0, 50%);
   font-size: clamp(14px, 1.125vw, 1rem);
+  text-decoration: none;
+  color: #fff;
   transition: .3s ease;
   cursor: pointer;
   background-color: ${ButtonPro};
