@@ -30,7 +30,7 @@ const container = useRef(null);
                 <HeroTitle>Design, Develop & Deploy<br/>Cutting Edge Web<br/>Applications.</HeroTitle>
                 <HeroDescription>I Design and Impliment modern web applications with the focus on responsive design and accessibility.</HeroDescription>
                 <ButtonContainer>
-                    <PrimeButton><a href='https://drive.google.com/file/d/1B1wXmKfJWndJjuLrx6lIjEb26AjriA02/view?usp=sharing' target='_blank'>Resume</a> <FontAwesomeIcon className="rel" icon={faChevronRight}/> </PrimeButton>
+                    <PrimeButton href='https://drive.google.com/file/d/1B1wXmKfJWndJjuLrx6lIjEb26AjriA02/view?usp=sharing' target='_blank'><p>Resume</p> <FontAwesomeIcon className="rel" icon={faChevronRight}/> </PrimeButton>
                     <SecondaryButton to="portfolio" smooth={true} duration={500} spy={true} exact={true} offset={-80}><a href='/portfolio'>Projects</a>  <FontAwesomeIcon className="rel" icon={faChevronRight}/></SecondaryButton>
                 </ButtonContainer>
             </Left>

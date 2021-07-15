@@ -98,20 +98,47 @@ export const ButtonContainer = styled.div`
     }
 }`;
 
-export const PrimeButton = styled(Button)`
+export const PrimeButton = styled.a`
+position: relative;
 background-color: ${PrimaryColor};
 display: inline-flex;
+justify-content: center;
+align-items: center;
+text-decoration: none;
 margin: 1rem 1rem 0 0;
 padding: 10px 30px;
 letter-spacing: .5px;
 text-transform: capitalize;
+border-radius: 4px;
+color: #fff;
+
+/* after styling */
+&::after{
+content: '';
+position: absolute;
+background-color: ${PrimaryColor};
+border-radius: inherit;
+left: 0;
+top: 0;
+bottom: 0;
+right: 0;
+height: 100%;
+width: 0%;
+transition: all .25s ease-in-out;
+}
+
+
+&:hover::after{
+    width: 100%;
+}
+
 
 /* Mobile View */
 @media screen and (max-width: 720px) {
     margin: 0 0 10px 0;
 }
 
-a{position: relative; margin-right: 5px;}
+p{position: relative; margin-right: 5px; z-index: 5;}
 
 
 &:hover{ color:black; svg{transform: translateX(5px);}}
