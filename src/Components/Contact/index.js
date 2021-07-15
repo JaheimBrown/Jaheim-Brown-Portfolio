@@ -12,7 +12,7 @@ const Contact = () => {
 
             <form action="https://formsubmit.co/jaheimcbrown@gmail.com" method="POST">
                 <input type="hidden" name="_captcha" value="false"></input>
-                <input type="hidden" name="_next" value='http://localhost:3000/ThankYou'/>
+                <input type="hidden" name="_next" value='https://jaheim-brown-portfolio.hostman.site/ThankYou'/>
                 <div>
                     <input type='text' name="name" id="name" required></input>
                     <label for="name">Name</label>
