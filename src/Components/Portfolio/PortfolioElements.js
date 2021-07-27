@@ -144,6 +144,7 @@ text-transform: uppercase;
 
 export const TechUsed = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin-top: 1rem;
   
   li {margin-right: 15px;}
