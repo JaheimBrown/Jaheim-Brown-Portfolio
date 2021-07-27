@@ -5,6 +5,7 @@ import { PortfolioSection, ProjectImage1, PortfolioName, Description, ProjectsCo
 import project1 from '../../assets/projects/project1.png';
 import project2 from '../../assets/projects/project2.png';
 import project3 from '../../assets/projects/project3.png';
+import project4 from '../../assets/projects/project4.png';
 
 import globe from '../../assets/globe.svg';
 import code from '../../assets/code.svg';
@@ -62,6 +63,24 @@ const Portfolio = () => {
                         <ButtonContainer>
                           <PrimaryButton>View Live <img alt="" src={globe}/></PrimaryButton>
                           <SecButton>Source Code <img alt="" src={code}/></SecButton>
+                        </ButtonContainer>
+                    </ProjectDescription>
+                </Project>
+                 {/* PROJECT #4 */}
+                 <Project>
+                    <ProjectImage1 style= {{ backgroundImage: `url(${project4})` , backgroundPosition: 'left top'}} ></ProjectImage1>
+                    <ProjectDescription>
+                        <ProjectName>JBCommerce</ProjectName>
+                        <p>This is an E-commerce website I built using React for the frontend and commerce.js paired with stripe for the backend to create a fully functional web shopping experience.</p>
+                        <TechUsed>
+                            <li><abbr title='Technologies Used'>REACT</abbr></li>
+                            <li><abbr title='Technologies Used'>MATERIAL-UI</abbr></li>
+                            <li><abbr title='Technologies Used'>COMMERCE.JS</abbr></li>
+                            <li><abbr title='Technologies Used'>STRIPE.JS</abbr></li>
+                        </TechUsed>
+                        <ButtonContainer>
+                          <PrimaryButton href='https://ecommerce-project.hostman.site/'>View Live <img alt="" src={globe}/></PrimaryButton>
+                          <SecButton href='https://github.com/KxngJ/Ecommerce-Project'>Source Code <img alt="" src={code}/></SecButton>
                         </ButtonContainer>
                     </ProjectDescription>
                 </Project>
