@@ -79,8 +79,8 @@ const Portfolio = () => {
                             <li><abbr title='Technologies Used'>STRIPE.JS</abbr></li>
                         </TechUsed>
                         <ButtonContainer>
-                          <PrimaryButton href='https://ecommerce-project.hostman.site/'>View Live <img alt="" src={globe}/></PrimaryButton>
-                          <SecButton href='https://github.com/KxngJ/Ecommerce-Project'>Source Code <img alt="" src={code}/></SecButton>
+                          <PrimaryButton href='https://ecommerce-project.hostman.site/' target="_blank">View Live <img alt="" src={globe}/></PrimaryButton>
+                          <SecButton href='https://github.com/KxngJ/Ecommerce-Project' target="_blank">Source Code <img alt="" src={code}/></SecButton>
                         </ButtonContainer>
                     </ProjectDescription>
                 </Project>
