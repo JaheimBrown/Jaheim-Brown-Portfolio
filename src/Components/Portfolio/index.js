@@ -51,7 +51,7 @@ const Portfolio = () => {
                 </Project>
                  {/* PROJECT #3 */}
                  <Project>
-                    <ProjectImage1 style= {{ backgroundImage: `url(${project3})` }} ></ProjectImage1>
+                    <ProjectImage1 style= {{ backgroundImage: `url(${project3})`, backgroundPosition: 'left 5%' }} ></ProjectImage1>
                     <ProjectDescription>
                         <ProjectName>PORTFOLIO V1</ProjectName>
                         <p>This is the first version of my portfolio website. I wanted to learn how to build websites using vanilla HTML, CSS and Javascript to build a website in which will serve to display all the projects I have created on my journey in learning web development.</p>
@@ -61,8 +61,8 @@ const Portfolio = () => {
                             <li><abbr title='Technologies Used'>JS</abbr></li>
                         </TechUsed>
                         <ButtonContainer>
-                          <PrimaryButton>View Live <img alt="" src={globe}/></PrimaryButton>
-                          <SecButton>Source Code <img alt="" src={code}/></SecButton>
+                          <PrimaryButton href='https://kxngj.github.io/Portfolio-Jaheim-Brown/' target='_blank'>View Live <img alt="" src={globe}/></PrimaryButton>
+                          <SecButton href='https://github.com/KxngJ/Portfolio-Jaheim-Brown' target='_blank'>Source Code <img alt="" src={code}/></SecButton>
                         </ButtonContainer>
                     </ProjectDescription>
                 </Project>
