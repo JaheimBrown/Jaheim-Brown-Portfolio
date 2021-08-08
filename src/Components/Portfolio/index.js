@@ -34,7 +34,7 @@ const Portfolio = () => {
                 </Project>
                 {/* PROJECT #2 */}
                 <Project>
-                    <ProjectImage1 style= {{ backgroundImage: `url(${project2})` }} ></ProjectImage1>
+                    <ProjectImage1 style= {{ backgroundImage: `url(${project2})`, backgroundPosition: '-40px top' }} ></ProjectImage1>
                     <ProjectDescription>
                         <ProjectName>PUREART</ProjectName>
                         <p>I am currently building this project for a client who wants and eCommerce website to sell their art products and services. They wanted a Shopify site with a more custom layout so I used an existing Shopify theme and tweaked it with some additional lines of CSS..</p>
