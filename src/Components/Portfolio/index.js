@@ -1,14 +1,17 @@
 import React from 'react';
 import { PortfolioSection, ProjectImage1, PortfolioName, Description, ProjectsContainer, Project, ProjectDescription, ProjectName, TechUsed, ButtonContainer, PrimaryButton, SecButton } from './PortfolioElements';
 
+import { PrimaryColor } from '../Global';
+
 // PROJECT IMAGES
 import project1 from '../../assets/projects/project1.png';
 import project2 from '../../assets/projects/project2.png';
 import project3 from '../../assets/projects/project3.png';
 import project4 from '../../assets/projects/project4.png';
 
-import globe from '../../assets/globe.svg';
-import code from '../../assets/code.svg';
+// REACT ICONS
+import  { FaGlobe } from 'react-icons/fa';
+import  { FiCode } from 'react-icons/fi';
 
 const Portfolio = () => {
     return (
@@ -23,12 +26,15 @@ const Portfolio = () => {
                         <ProjectName>JBCodes</ProjectName>
                         <p>This is the second version of my portfolio website. With this version, I wanted to learn a new technoloy (React.js) to build an interactive website with animations and transitions with the use of Lottiefiles vanilla JavaScript and CSS.</p>
                         <TechUsed>
-                            <li><abbr title='Technologies Used'>React</abbr></li>
-                            <li><abbr title='Technologies Used'>Styled-Components</abbr></li>
+                            <h3>Tech Used</h3>
+                            <ul>
+                                <li><abbr title='Technologies Used'>REACT</abbr></li>
+                                <li><abbr title='Technologies Used'>STYLED-COMPONENTS</abbr></li>
+                            </ul>
                         </TechUsed>
                         <ButtonContainer>
-                          <PrimaryButton href='https://jaheim-brown-portfolio.hostman.site/' target='_blank'>View Live <img alt="" src={globe}/></PrimaryButton>
-                          <SecButton href='https://github.com/KxngJ/Jaheim-Brown-Portfolio' target='_blank'>Source Code <img alt="" src={code}/></SecButton>
+                          <PrimaryButton href='https://jaheim-brown-portfolio.hostman.site/' target='_blank'>View Live <FaGlobe style={{color: `${PrimaryColor}`, marginLeft: '5px'}} /></PrimaryButton>
+                          <SecButton href='https://github.com/KxngJ/Jaheim-Brown-Portfolio' target='_blank'> Code <FiCode style={{color: `${PrimaryColor}`, marginLeft: '5px'}} /></SecButton>
                         </ButtonContainer>
                     </ProjectDescription>
                 </Project>
@@ -39,13 +45,16 @@ const Portfolio = () => {
                         <ProjectName>PUREART</ProjectName>
                         <p>I am currently building this project for a client who wants and eCommerce website to sell their art products and services. They wanted a Shopify site with a more custom layout so I used an existing Shopify theme and tweaked it with some additional lines of CSS..</p>
                         <TechUsed>
-                            <li><abbr title='Technologies Used'>HTML</abbr></li>
-                            <li><abbr title='Technologies Used'>CSS</abbr></li>
-                            <li><abbr title='Technologies Used'>LIQUID ( SHOPIFY )</abbr></li>
+                            <h3>Tech Used</h3>
+                            <ul>
+                                <li><abbr title='Technologies Used'>HTML</abbr></li>
+                                <li><abbr title='Technologies Used'>CSS</abbr></li>
+                                <li><abbr title='Technologies Used'>LIQUID ( SHOPIFY )</abbr></li>
+                            </ul>
                         </TechUsed>
                         <ButtonContainer>
-                          <PrimaryButton>View Live <img alt="" src={globe}/></PrimaryButton>
-                          <SecButton>Source Code <img alt="" src={code}/></SecButton>
+                          <PrimaryButton>View Live <FaGlobe style={{color: `${PrimaryColor}`, marginLeft: '5px'}} /></PrimaryButton>
+                          <SecButton> Code <FiCode style={{color: `${PrimaryColor}`, marginLeft: '5px'}} /></SecButton>
                         </ButtonContainer>
                     </ProjectDescription>
                 </Project>
@@ -56,13 +65,16 @@ const Portfolio = () => {
                         <ProjectName>PORTFOLIO V1</ProjectName>
                         <p>This is the first version of my portfolio website. I wanted to learn how to build websites using vanilla HTML, CSS and Javascript to build a website in which will serve to display all the projects I have created on my journey in learning web development.</p>
                         <TechUsed>
-                            <li><abbr title='Technologies Used'>HTML</abbr></li>
-                            <li><abbr title='Technologies Used'>CSS</abbr></li>
-                            <li><abbr title='Technologies Used'>JS</abbr></li>
-                        </TechUsed>
+                            <h3>Tech Used</h3>
+                            <ul>
+                                <li><abbr title='Technologies Used'>HTML</abbr></li>
+                                <li><abbr title='Technologies Used'>CSS</abbr></li>
+                                <li><abbr title='Technologies Used'>JS</abbr></li>
+                            </ul>
+                        </TechUsed>  
                         <ButtonContainer>
-                          <PrimaryButton href='https://kxngj.github.io/Portfolio-Jaheim-Brown/' target='_blank'>View Live <img alt="" src={globe}/></PrimaryButton>
-                          <SecButton href='https://github.com/KxngJ/Portfolio-Jaheim-Brown' target='_blank'>Source Code <img alt="" src={code}/></SecButton>
+                          <PrimaryButton href='https://kxngj.github.io/Portfolio-Jaheim-Brown/' target='_blank'>View Live <FaGlobe style={{color: `${PrimaryColor}`, marginLeft: '5px'}} /></PrimaryButton>
+                          <SecButton href='https://github.com/KxngJ/Portfolio-Jaheim-Brown' target='_blank'> Code <FiCode style={{color: `${PrimaryColor}`, marginLeft: '5px'}} /></SecButton>
                         </ButtonContainer>
                     </ProjectDescription>
                 </Project>
@@ -73,14 +85,17 @@ const Portfolio = () => {
                         <ProjectName>JBCommerce</ProjectName>
                         <p>This is an E-commerce website I built using React for the frontend and commerce.js paired with stripe for the backend to create a fully functional web shopping experience.</p>
                         <TechUsed>
-                            <li><abbr title='Technologies Used'>REACT</abbr></li>
-                            <li><abbr title='Technologies Used'>MATERIAL-UI</abbr></li>
-                            <li><abbr title='Technologies Used'>COMMERCE.JS</abbr></li>
-                            <li><abbr title='Technologies Used'>STRIPE.JS</abbr></li>
+                            <h3>Tech Used</h3>
+                            <ul>
+                                <li><abbr title='Technologies Used'>REACT</abbr></li>
+                                <li><abbr title='Technologies Used'>MATERIAL-UI</abbr></li>
+                                <li><abbr title='Technologies Used'>COMMERCE.JS</abbr></li>
+                                <li><abbr title='Technologies Used'>STRIPE.JS</abbr></li>
+                            </ul>
                         </TechUsed>
                         <ButtonContainer>
-                          <PrimaryButton href='https://ecommerce-project.hostman.site/' target="_blank">View Live <img alt="" src={globe}/></PrimaryButton>
-                          <SecButton href='https://github.com/KxngJ/Ecommerce-Project' target="_blank">Source Code <img alt="" src={code}/></SecButton>
+                          <PrimaryButton href='https://ecommerce-project.hostman.site/' target="_blank">View Live <FaGlobe style={{color: `${PrimaryColor}`, marginLeft: '5px'}} /></PrimaryButton>
+                          <SecButton href='https://github.com/KxngJ/Ecommerce-Project' target="_blank"> Code <FiCode style={{color: `${PrimaryColor}`, marginLeft: '5px'}} /></SecButton>
                         </ButtonContainer>
                     </ProjectDescription>
                 </Project>
