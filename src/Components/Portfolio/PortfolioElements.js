@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { BgColor, ButtonPro, ParaCol, SecondaryBg } from '../Global';
+import { ParaCol, PrimaryColor, SecondaryBg } from '../Global';
 import { SectionName, AboutDescription } from '../About/AboutElements';
 
 export const PortfolioSection = styled.div`
-  max-width: 1300px;
   height: auto;
   margin: 0 auto 2.5em auto; 
+  max-width: 1300px;
 `;
 
 export const PortfolioName = styled(SectionName)``;
@@ -28,12 +28,11 @@ export const ProjectsContainer = styled.div`
 
 export const Project = styled.div`
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${SecondaryBg};
-  width: clamp(300px, 80vw, 1200px);
-  padding: 1rem; 
+  display: grid;
+  grid-template-columns: 575px 1fr;
+  grid-gap: 1em;
+  background-color: #272735;
+  max-width: 1200px;
   margin-bottom: 2rem;
   border-radius: 25px;
   cursor: pointer;
@@ -95,15 +94,13 @@ export const Project = styled.div`
 `;
 
 // IMAGE STYLING
-export const ProjectImage1 = styled.div`
-  display: block;
-  background-position: top;
+export const ProjectImage1 = styled.span`
+  grid-column: 1/2;
   background-repeat: no-repeat;
-  overflow: hidden;
   object-fit: cover;
-  width: 220%;
-  height: 250px;
-  margin-right: 1.125rem;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 20px 0 0 20px;
 
     /* TABLET VIEW */
     @media screen and (max-width: 1024px) {
@@ -117,15 +114,18 @@ export const ProjectImage1 = styled.div`
   `;
 
 export const ProjectDescription = styled.div`
-  display: flex; 
-  justify-content: center;
-  flex-direction: column;
+  display: grid; 
+  padding: 1rem;
+  grid-row-gap: 1.5em;
+  grid-template-columns: 1fr 1fr;
 
   p {
       font-size: clamp(14px, 2vw, 1.125rem);
       text-align: justify;
-      line-height: 35px;
+      line-height: 1.9em;
       color: ${ParaCol};
+      grid-column: 1/3;
+      grid-row: 2/3;
 
       @media screen and (max-width: 1024px) {
       line-height: 40px;
@@ -133,10 +133,22 @@ export const ProjectDescription = styled.div`
   }
 `;
 
-export const ProjectName = styled.h1`
-text-transform: uppercase;
-  font-size: clamp(1rem, 1.5rem, 2rem);
+export const ProjectName = styled.h2`
+  font-size: 1.5em;
   font-weight: normal;
+  color: ${PrimaryColor};
+  position: relative;
+  grid-column: 1/3;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 65px;
+    height: 3px;
+    border-radius: 4px;
+    bottom: -5px;
+  }
 
   @media screen and (max-width: 400px) {
       align-self: center;
@@ -144,11 +156,23 @@ text-transform: uppercase;
 `;
 
 export const TechUsed = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-  
-  li {margin-right: 15px;}
+  grid-column: 1/2;
+  grid-row: 3/4;
+
+  h3 { font-size: 1rem; margin-bottom: 5px; }
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    li {
+      font-size: .9em;
+      color: #DFDFDF;
+      margin:  0 15px;
+    }
+  }
 
   @media screen and (max-width: 320px) {
     justify-content: space-between;
@@ -157,6 +181,10 @@ export const TechUsed = styled.div`
 `;
 
 export const ButtonContainer = styled.div`
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: flex;
+  align-items: flex-end;
    @media screen and (max-width: 320px) {
        display: flex;
        flex-direction: column;
@@ -166,23 +194,22 @@ export const ButtonContainer = styled.div`
 `;
 
 export const PrimaryButton = styled.a`
-  display: inline-flex;
-  justify-content: center;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;  
-  padding: 10px 25px;
-  margin-top: 1rem;
   border-radius: 4px;
-  background-color: ${BgColor};
-  box-shadow: 6px 6px 25px rgba(0, 0, 0, 50%);
-  font-size: clamp(14px, 1.125vw, 1rem);
-  text-decoration: none;
+  width: 130px;
+  height: 40px;
+  background-color: #363648;
   color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 50%);
   transition: .3s ease;
   cursor: pointer;
-  background-color: ${ButtonPro};
-  img{width: 20px; margin-left: 10px;}
+  img{width: 15px; margin-left: 10px;}
 
-  &:hover{background-color: #fff; color: Black;}
+  &:hover{background-color: ${PrimaryColor}; color: #fff;}
 
      /* TABLET VIEW */
      @media screen and (max-width: 1024px) {
