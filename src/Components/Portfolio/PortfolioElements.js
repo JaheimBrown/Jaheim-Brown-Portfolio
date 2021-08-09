@@ -5,11 +5,12 @@ import { SectionName, AboutDescription } from '../About/AboutElements';
 export const PortfolioSection = styled.div`
   max-width: 1300px;
   height: auto;
-  margin: 0 auto;
+  margin: 0 auto 2.5em auto; 
 `;
 
 export const PortfolioName = styled(SectionName)``;
 export const Description = styled(AboutDescription)`
+  margin-bottom: 2.5em;
   @media screen and (max-width: 1024px) {
       margin-bottom: 2rem;
     }

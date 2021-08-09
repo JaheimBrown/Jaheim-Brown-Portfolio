@@ -5,7 +5,7 @@ import { PrimaryColor, SecondaryColor, ParaCol } from '../Global';
 export const AboutSection = styled.section`
     max-width: 1300px;
     height: atuo;
-    margin: 0 auto;
+    margin: 0 auto 2.5em auto; 
 
     @media screen and (max-width: 720px) {
             width: auto;
@@ -13,16 +13,28 @@ export const AboutSection = styled.section`
     `;
 
     export const SectionName = styled.h1`
-        font-size: clamp(1rem, 2vw, 2rem);
-        text-align: center;
+        font-size: 2em;
         color: ${PrimaryColor};
+        margin: 0 auto 15px 5%;
+        text-align: center;
+        position: relative;
+        display: inline-block;
+
+        span {
+            width: 70px;
+            height: 4px;
+            border-radius: 5px;
+            background-color: ${SecondaryColor};
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
     `;
 
     export const AboutDescription = styled.p`
-        font-size: clamp(.75rem, 1vw, 1.125rem);
+        font-size: 1rem;
         color: #f2f2f2;
-        text-align: center;
-        margin-bottom: 1rem;
+        margin: 0 0 1rem 5%;
     `;
 
     // Bio Container Items

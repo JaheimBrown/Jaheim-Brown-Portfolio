@@ -7,7 +7,7 @@ const thankYou = <Link to='/ThankYou'></Link>;
 const Contact = () => {
     return (
         <ContactSection id='contact'>
-            <ContactHeading>Contact</ContactHeading>
+            <ContactHeading>Contact<span></span></ContactHeading>
             <ContactDescription>Plese submit the form below so that I can get back to you as soon as possible.</ContactDescription>
 
             <form action="https://formsubmit.co/jaheimcbrown@gmail.com" method="POST">

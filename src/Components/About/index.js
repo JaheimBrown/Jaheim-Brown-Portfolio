@@ -5,7 +5,7 @@ import { AboutSection, SectionName, AboutDescription, AboutContainer, AboutImage
     const About = () => {
         return (
             <AboutSection id='about'>
-            <SectionName>About Me</SectionName>
+            <SectionName>About Me<span></span></SectionName>
             <AboutDescription>Get to know me better.</AboutDescription>
             <AboutContainer>
                 <AboutImage>
