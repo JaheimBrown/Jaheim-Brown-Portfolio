@@ -11,9 +11,6 @@ export const PortfolioSection = styled.div`
 export const PortfolioName = styled(SectionName)``;
 export const Description = styled(AboutDescription)`
   margin-bottom: 2.5em;
-  @media screen and (max-width: 1024px) {
-      margin-bottom: 2rem;
-    }
 `;
 
 
@@ -23,7 +20,13 @@ export const ProjectsContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  padding: 0 2em;
   max-width: 1300px;
+
+  @media screen and (max-width: 605px) {
+    padding: 1em;
+    grid-gap: 1em;
+  }
 `;
 
 export const Project = styled.div`
@@ -31,7 +34,7 @@ export const Project = styled.div`
   display: grid;
   grid-template-columns: 575px 1fr;
   grid-gap: 1em;
-  background-color: #272735;
+  background-color: #1E1E29;
   max-width: 1200px;
   margin-bottom: 2rem;
   border-radius: 25px;
@@ -58,39 +61,17 @@ export const Project = styled.div`
     box-shadow: 12px 12px 20px rgba(0, 0, 0, .2);
   }
 
-  /* TABLET VIEW */
-  @media screen and (max-width: 1024px) {
-    width: 750px;
-    padding: .5rem;
+  @media screen and (max-width: 1165px) {
+    grid-template-columns: 1fr 2fr;
   }
 
-   /* SMALL TABLET VIEW */
-   @media screen and (max-width: 768px) {
-    width: 700px;
+  @media screen and (max-width: 865px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
-
-  /* SURFACE DUO */
-  @media screen and (max-width: 540px) {
-    flex-direction: column;
-      width: 480px;
-      grid-gap: 1rem;
-      overflow: hidden;
+  @media screen and (max-width: 605px) {
+    grid-gap: 0;
   }
-
-  /* MOBILE VIEW */
-  @media screen and (max-width: 420px) {
-        flex-direction: column;
-        width: 330px;
-        grid-gap: 1rem;
-        overflow: hidden;
-      }
-
-      @media screen and (max-width: 320px) {
-        flex-direction: column;
-        width: 270px;
-        grid-gap: 1rem;
-        overflow: hidden;
-      }
 `;
 
 // IMAGE STYLING
@@ -102,22 +83,21 @@ export const ProjectImage1 = styled.span`
   overflow: hidden;
   border-radius: 20px 0 0 20px;
 
-    /* TABLET VIEW */
-    @media screen and (max-width: 1024px) {
-        width: 240%;
-        align-self: flex-start;
-      }
-      @media screen and (max-width: 700px) {
-        width: 100%;
-        margin: 0;
-      }
+  @media screen and (max-width: 865px) {
+    background-position: top center!important;
+  }
+
+  @media screen and (max-width: 605px) {
+    height: 300px;
+  }
   `;
 
 export const ProjectDescription = styled.div`
   display: grid; 
   padding: 1rem;
   grid-row-gap: 1.5em;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
 
   p {
       font-size: clamp(14px, 2vw, 1.125rem);
@@ -126,11 +106,7 @@ export const ProjectDescription = styled.div`
       color: ${ParaCol};
       grid-column: 1/3;
       grid-row: 2/3;
-
-      @media screen and (max-width: 1024px) {
-      line-height: 40px;
     }
-  }
 `;
 
 export const ProjectName = styled.h2`
@@ -149,10 +125,6 @@ export const ProjectName = styled.h2`
     border-radius: 4px;
     bottom: -5px;
   }
-
-  @media screen and (max-width: 400px) {
-      align-self: center;
-    }
 `;
 
 export const TechUsed = styled.div`
@@ -170,13 +142,13 @@ export const TechUsed = styled.div`
     li {
       font-size: .9em;
       color: #DFDFDF;
-      margin:  0 15px;
+      margin:  0 14px;
     }
   }
 
-  @media screen and (max-width: 320px) {
-    justify-content: space-between;
-    width: 300px;
+  @media screen and (max-width: 605px) {
+    grid-column: 1/3;
+    grid-row: 3/4;
   }
 `;
 
@@ -185,12 +157,16 @@ export const ButtonContainer = styled.div`
   grid-row: 3/4;
   display: flex;
   align-items: flex-end;
-   @media screen and (max-width: 320px) {
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-itmes: center;
-      }
+
+  @media screen and (max-width: 865px) {
+    justify-content: flex-end;
+  }
+
+  @media screen and (max-width: 605px) {
+    grid-column: 1/3;
+    grid-row: 4/5;
+    justify-content: flex-start;
+  }
 `;
 
 export const PrimaryButton = styled.a`
@@ -200,7 +176,7 @@ export const PrimaryButton = styled.a`
   border-radius: 4px;
   width: 130px;
   height: 40px;
-  background-color: #363648;
+  background-color: #272736;
   color: #fff;
   font-size: 1em;
   text-decoration: none;
@@ -209,17 +185,11 @@ export const PrimaryButton = styled.a`
   cursor: pointer;
   img{width: 15px; margin-left: 10px;}
 
-  &:hover{background-color: ${PrimaryColor}; color: #fff;}
-
-     /* TABLET VIEW */
-     @media screen and (max-width: 1024px) {
-        padding: 8px 20px;
-      }
+  &:hover{background-color: #fff; color: black;}
 `;
 
 export const SecButton = styled(PrimaryButton)`
-  margin-left: 1rem;
-    @media screen and (max-width: 320px) {
-        margin: 10px 0;
-    }
+  margin-left: 1em;
+  /* background-color: unset; */
+  border: 2px solid #363648;
 `;
