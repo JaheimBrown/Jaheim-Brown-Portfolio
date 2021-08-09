@@ -33,7 +33,7 @@ const Portfolio = () => {
                             </ul>
                         </TechUsed>
                         <ButtonContainer>
-                          <PrimaryButton href='https://jaheim-brown-portfolio.hostman.site/' target='_blank'>View Live <FaGlobe style={{color: `${PrimaryColor}`, marginLeft: '5px'}} /></PrimaryButton>
+                          <PrimaryButton href='https://jaheim-brown-portfolio.hostman.site/' target='_blank'>View Live <FaGlobe className='pHover' style={{color: `${PrimaryColor}`, marginLeft: '5px' }} /></PrimaryButton>
                           <SecButton href='https://github.com/KxngJ/Jaheim-Brown-Portfolio' target='_blank'> Code <FiCode style={{color: `${PrimaryColor}`, marginLeft: '5px'}} /></SecButton>
                         </ButtonContainer>
                     </ProjectDescription>
