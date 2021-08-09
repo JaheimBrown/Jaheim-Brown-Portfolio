@@ -62,7 +62,6 @@ export const ContactHeading = styled(SectionName)``;
 
 export const ContactDescription = styled(AboutDescription)`
     margin-bottom: 2rem;
-    padding: 0 1rem;
 `;
 
 export const Button = styled.button`

@@ -9,7 +9,7 @@ justify-content: space-between;
 align-items: center;
 max-width: 1300px;
 height: 570px;
-margin: 0 auto;
+margin: 0 auto 2.5em auto; 
 
 @media screen and (max-width: 1024px) {
         align-items: flex-start;

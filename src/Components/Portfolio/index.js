@@ -13,7 +13,7 @@ import code from '../../assets/code.svg';
 const Portfolio = () => {
     return (
         <PortfolioSection id='portfolio'>
-            <PortfolioName>Portfolio</PortfolioName>
+            <PortfolioName>Portfolio<span></span></PortfolioName>
             <Description>Below are some projects I have created.</Description>
             <ProjectsContainer>
               {/* PROJECT #1 */}
