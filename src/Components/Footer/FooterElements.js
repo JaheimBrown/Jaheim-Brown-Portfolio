@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { SecondaryBg } from '../Global'; 
+import { BgColor, SecondaryBg } from '../Global'; 
 
 export const FooterSection = styled.footer`
-    background-color: ${SecondaryBg};
+    background-color: #1E1E29;
     color: #fff;
     height: 50px;
 
@@ -38,9 +38,20 @@ export const FooterSocials = styled.div`
     height: 100%;
 
     a {
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #272736;
         color: #fff;
+        border-radius: 50%;
+        padding: .5em;
         text-decoration: none;
         font-size: 1.125rem;
+        transition: .3s ease;
+
+        &:hover, &:focus{
+            background-color: #fff;
+            color: #000;
+        }
     }
 `;
