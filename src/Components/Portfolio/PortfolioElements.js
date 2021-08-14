@@ -85,6 +85,7 @@ export const ProjectImage1 = styled.span`
 
   @media screen and (max-width: 865px) {
     background-position: top center!important;
+    height: 250px;
   }
 
   @media screen and (max-width: 605px) {
