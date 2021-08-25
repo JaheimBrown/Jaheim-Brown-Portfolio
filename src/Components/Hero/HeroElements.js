@@ -165,7 +165,7 @@ a{position: relative;}
 `;
 
 export const Right = styled.div`
-img{
+svg{
     width: 450px;
     @media screen and (max-width: 1235px) {
         width: 400px;
