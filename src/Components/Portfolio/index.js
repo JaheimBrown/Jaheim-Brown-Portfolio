@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useRef} from 'react';
+import { useIntersection } from 'react-use';
+import gsap from 'gsap';
 import { PortfolioSection, ProjectImage1, PortfolioName, Description, ProjectsContainer, Project, ProjectDescription, ProjectName, TechUsed, ButtonContainer, PrimaryButton, SecButton } from './PortfolioElements';
 
 import { PrimaryColor } from '../Global';
@@ -14,8 +16,25 @@ import  { FaGlobe } from 'react-icons/fa';
 import  { FiCode } from 'react-icons/fi';
 
 const Portfolio = () => {
+     // Use Intersection
+     const Ref = React.useRef(null);
+
+     const intersection = useIntersection(Ref, {
+         root: null,
+         rootMargin: '0px',
+         threshold: .2
+       });
+
+       const anim = (element) => {
+           gsap.to(element, 1, {
+               opacity: 1,
+           })
+       }
+
+       intersection && intersection.intersectionRatio > .2 ? anim('.intersection2') : anim(null)
+
     return (
-        <PortfolioSection id='portfolio'>
+        <PortfolioSection id='portfolio' className="intersection2" ref={Ref}>
             <PortfolioName>Portfolio<span></span></PortfolioName>
             <Description>Below are some projects I have created.</Description>
             <ProjectsContainer>

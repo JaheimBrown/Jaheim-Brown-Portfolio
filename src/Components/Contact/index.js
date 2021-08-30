@@ -1,12 +1,31 @@
-import React from 'react'
+import React, {useRef} from 'react'
+import { useIntersection } from 'react-use';
+import gsap from 'gsap';
 import { Link } from 'react-router-dom';
 import { ContactSection, ContactHeading, ContactDescription, Button, plane } from './ContactElements';
 
 const thankYou = <Link to='/ThankYou'></Link>;
 
 const Contact = () => {
+    // Use Intersection
+    const contactRef = React.useRef(null);
+
+    const intersection = useIntersection(contactRef, {
+        root: null,
+        rootMargin: '0px',
+        threshold: .5
+      });
+
+      const anim = (element) => {
+          gsap.to(element, 1, {
+              opacity: 1,
+          })
+      }
+
+      intersection && intersection.intersectionRatio > .5 ? anim('.intersection3') : anim(null)
+
     return (
-        <ContactSection id='contact'>
+        <ContactSection className="intersection3" ref={contactRef} id='contact'>
             <ContactHeading>Contact<span></span></ContactHeading>
             <ContactDescription>Plese submit the form below so that I can get back to you as soon as possible.</ContactDescription>
 

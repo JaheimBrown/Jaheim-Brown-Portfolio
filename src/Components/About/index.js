@@ -1,15 +1,34 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react';
+import { useIntersection } from 'react-use';
+import gsap from 'gsap';
 import ImageAbout from '../../assets/aboutimage.png';
 import { AboutSection, SectionName, AboutDescription, AboutContainer, AboutImage, AboutBio, BioHeading, BioDescription,BioClosing, AboutSkills, SkillHeading, SkillContainer, SkillClosing } from './AboutElements';
 
     const About = () => {
+        // Use Intersection Test
+        const intersectionRef = React.useRef(null);
+
+        const intersection = useIntersection(intersectionRef, {
+            root: null,
+            rootMargin: '0px',
+            threshold: .5
+          });
+
+          const fade = (element) => {
+              gsap.to(element, 1, {
+                  opacity: 1,
+              })
+          }
+
+          intersection && intersection.intersectionRatio > .5 ? fade('.intersection') : fade(null)
+
         return (
-            <AboutSection id='about'>
+            <AboutSection  className='intersection' ref={intersectionRef} id='about'>
             <SectionName>About Me<span></span></SectionName>
             <AboutDescription>Get to know me better.</AboutDescription>
             <AboutContainer>
                 <AboutImage>
-                    <img alt='' src={ImageAbout} />
+                    <img className='anim'  alt='' src={ImageAbout} />
                 </AboutImage>
                 <AboutBio>
                     <BioHeading><span>Hello</span>I'm Jaheim Brown</BioHeading>
