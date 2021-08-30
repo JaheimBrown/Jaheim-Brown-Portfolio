@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { ParaCol, PrimaryColor, SecondaryBg } from '../Global';
+import { ParaCol, PrimaryColor } from '../Global';
 import { SectionName, AboutDescription } from '../About/AboutElements';
 
 export const PortfolioSection = styled.div`
   height: auto;
-  margin: 0 auto 2.5em auto; 
+  margin: 0 auto 3em auto; 
   max-width: 1300px;
 `;
 

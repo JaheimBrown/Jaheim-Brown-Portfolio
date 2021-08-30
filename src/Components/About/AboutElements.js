@@ -4,8 +4,9 @@ import { PrimaryColor, SecondaryColor, ParaCol } from '../Global';
 
 export const AboutSection = styled.section`
     max-width: 1300px;
-    height: atuo;
-    margin: 0 auto 2.5em auto; 
+    height: auto;
+    margin: 0 auto 3em auto; 
+    opacity: 0;
 
     @media screen and (max-width: 720px) {
             width: auto;

@@ -71,18 +71,19 @@ transition: all .5s ease-in-out;
   z-index: 10;
   transition: all .3s ease-in-out;
 }
+
+
+.intersection {
+  height: auto;
+  opacity: 0;
+}
+
+.intersection2 {
+  height: auto;
+  opacity: 0;
+}
+
+.intersection3 {
+  opacity: 0;
+}
 `;
-
-// // GSAP
-// const tl = gsap.timeline({
-//   defaults: {opacity: 0, duration: .3, ease: 'ease-in-out'}
-// });
-
-// tl.from('.main', { opacity: .5, y: 50 })
-// .from('.tech1', { y: 30 }, '-=.2')
-// .from('.tech2', { y: 30 }, '-=.1')
-// .from('.tech3', { y: 30 }, '-=.1')
-// .from('.tech4', { y: 30 }, '-=.1')
-// .from('.tech5', { y: 30 }, '-=.1')
-// .from('.tech6', { y: 30 }, '-=.1')
-
