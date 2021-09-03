@@ -6,7 +6,6 @@ export const AboutSection = styled.section`
     max-width: 1300px;
     height: auto;
     margin: 0 auto 3em auto; 
-    opacity: 0;
 
     @media screen and (max-width: 720px) {
             width: auto;

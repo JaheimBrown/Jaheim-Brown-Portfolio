@@ -71,19 +71,4 @@ transition: all .5s ease-in-out;
   z-index: 10;
   transition: all .3s ease-in-out;
 }
-
-
-.intersection {
-  height: auto;
-  opacity: 0;
-}
-
-.intersection2 {
-  height: auto;
-  opacity: 0;
-}
-
-.intersection3 {
-  opacity: 0;
-}
 `;

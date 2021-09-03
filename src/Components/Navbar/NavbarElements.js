@@ -11,6 +11,15 @@ justify-content: center;
 align-items: center; 
 box-shadow: 3px 3px 12px rgba(0,0,0,.1);
 z-index: 99;
+transition: .3s ease;
+
+&.scroll-down {
+    transform: translateY(-100px);
+}
+
+&.scroll-up {
+    transform: translateY(0);
+}
 `;
 
 export const Nav = styled.nav`

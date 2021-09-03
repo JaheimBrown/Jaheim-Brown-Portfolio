@@ -42,8 +42,6 @@ export const Project = styled.div`
   opacity: .6;
   transition: .3s ease;
 
-  &:hover{opacity: 1; transform: scale(1.05);}
-
   &::before{
     content: "";
     position: absolute;
@@ -52,13 +50,12 @@ export const Project = styled.div`
     left: 0;
     right: 0;
     border-radius: 25px;
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, .1);
     transition: .3s ease-in-out; 
     pointer-events: none;
   }
 
   &:hover::before{
-    box-shadow: 12px 12px 20px rgba(0, 0, 0, .2);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, .2);
   }
 
   @media screen and (max-width: 1165px) {
