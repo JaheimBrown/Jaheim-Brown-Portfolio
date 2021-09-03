@@ -6,7 +6,6 @@ import phone from '../../assets/phone.svg';
 import { NavContainer, Nav, NavLogo, NavItems, NavElements,Hamburger, Button } from './NavbarElements';
 
 const Navbar = ({ toggle }) => {
-
     return (
         <NavContainer>
             <Nav>

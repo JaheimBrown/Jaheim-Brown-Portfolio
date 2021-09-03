@@ -1,31 +1,21 @@
-import React, {useRef} from 'react'
-import { useIntersection } from 'react-use';
-import gsap from 'gsap';
+import React, {useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import { ContactSection, ContactHeading, ContactDescription, Button, plane } from './ContactElements';
 
-const thankYou = <Link to='/ThankYou'></Link>;
+// ANIMATIONS
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 const Contact = () => {
-    // Use Intersection
-    const contactRef = React.useRef(null);
 
-    const intersection = useIntersection(contactRef, {
-        root: null,
-        rootMargin: '0px',
-        threshold: .5
-      });
+    useEffect(()=> {
+        AOS.init({duration: 1000});
+    }, [])
 
-      const anim = (element) => {
-          gsap.to(element, 1, {
-              opacity: 1,
-          })
-      }
-
-      intersection && intersection.intersectionRatio > .5 ? anim('.intersection3') : anim(null)
+    const thankYou = <Link to='/ThankYou'></Link>;
 
     return (
-        <ContactSection className="intersection3" ref={contactRef} id='contact'>
+        <ContactSection id='contact' data-aos="fade-up">
             <ContactHeading>Contact<span></span></ContactHeading>
             <ContactDescription>Plese submit the form below so that I can get back to you as soon as possible.</ContactDescription>
 
