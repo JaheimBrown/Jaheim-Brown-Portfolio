@@ -11,7 +11,7 @@ justify-content: center;
 align-items: center; 
 box-shadow: 3px 3px 12px rgba(0,0,0,.1);
 z-index: 99;
-transition: .3s ease;
+transition: .3s linear;
 
 &.scroll-down {
     transform: translateY(-100px);
@@ -27,17 +27,25 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 height: 80px;
-margin: 0 5%;
+padding: 0 20px;
 width: 100%;
 max-width: 1300px;
 `;
 
 export const NavLogo = styled(LinkS)`
-display: flex;
-justify-content: center;
-align-items: center;
-text-decoration: none;
-cursor: pointer;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: auto;
+    height: 100%;
+
+    img {
+        width: 150%;
+    }
+
+    @media screen and (max-width: 1024px) {
+        width: 100px;
+    }
 `;
 
 export const NavItems = styled.ul`
@@ -74,8 +82,8 @@ transition: .3s ease-in-out;
 
 @media screen and (min-width: 1024px) {
     &.active {
-        border-bottom: 3px solid ${PrimaryColor};
-    }
+        border-bottom: 2px solid ${PrimaryColor};
+}
 }
 
 @media screen and (max-width: 1024px) {
@@ -97,11 +105,11 @@ transition: .3s ease-in-out;
 export const Hamburger = styled.div`
     display: none;
     @media screen and (max-width: 1024px) {
-        display: block;
+        display: inline-block;
         postion: absolute;
         right: 5%;
         top: 20px;  
-        font-size: 1.85rem;
+        font-size: 2rem;
         cursor: pointer;
     }
 `;

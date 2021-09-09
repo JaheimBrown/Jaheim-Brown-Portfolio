@@ -10,7 +10,7 @@ export const PortfolioSection = styled.div`
 
 export const PortfolioName = styled(SectionName)``;
 export const Description = styled(AboutDescription)`
-  margin-bottom: 2.5em;
+  margin-bottom: 20px;
 `;
 
 
@@ -20,7 +20,7 @@ export const ProjectsContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 0 2em;
+  padding: 0 20px;
   max-width: 1300px;
 
   @media screen and (max-width: 605px) {
@@ -35,7 +35,7 @@ export const Project = styled.div`
   grid-template-columns: 575px 1fr;
   grid-gap: 1em;
   background-color: #1E1E29;
-  max-width: 1200px;
+  max-width: 1300px;
   margin-bottom: 2rem;
   border-radius: 25px;
   cursor: pointer;

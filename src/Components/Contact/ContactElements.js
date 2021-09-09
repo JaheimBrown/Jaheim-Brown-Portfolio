@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { AboutDescription, SectionName } from '../About/AboutElements';
-import { PrimaryColor, SecondaryBg } from '../Global';
+import { PrimaryColor, SecondaryBg, SecondaryColor } from '../Global';
 
 // FONTS AWESOME
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -10,16 +10,16 @@ export const plane = <FontAwesomeIcon className='sendIcon' icon={faPaperPlane}><
 
 //** STYLING **//
 export const ContactSection = styled.section`
-    height: 530px;
-    max-width: 725px;
+    height: auto;
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 20px;
 
     form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        padding: 0 2rem;
         width: 100%;
 
         div{
@@ -58,10 +58,18 @@ export const ContactSection = styled.section`
     }
 `;
 
-export const ContactHeading = styled(SectionName)``;
+export const ContactHeading = styled(SectionName)`
+    padding: 0;
+
+    span {
+        left: 0;
+    }
+
+`;
 
 export const ContactDescription = styled(AboutDescription)`
-    margin-bottom: 2rem;
+    padding: 20px 0;
+    margin-bottom: 20px;
 `;
 
 export const Button = styled.button`

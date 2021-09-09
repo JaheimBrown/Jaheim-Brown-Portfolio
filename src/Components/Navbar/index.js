@@ -9,7 +9,7 @@ const Navbar = ({ toggle }) => {
     return (
         <NavContainer>
             <Nav>
-                <NavLogo to='home' smooth={true} duration={500} spy={true} exact={true} offset={-80} > <img alt='' src={Logo}/> </NavLogo>
+                <NavLogo to='home' smooth={true} duration={500} spy={true} exact={true} offset={-80} ><img alt='' src={Logo}/> </NavLogo>
                 <NavItems>
                     <NavElements to="home" smooth={true} duration={500} spy={true} exact={true} offset={-80} >Home</NavElements>
                     <NavElements to="about" smooth={true} duration={500} spy={true} exact={true} offset={-80}>About</NavElements>

@@ -25,8 +25,8 @@ const Portfolio = () => {
 
     return (
         <PortfolioSection id='portfolio'>
-            <PortfolioName>Portfolio<span></span></PortfolioName>
-            <Description>Below are some projects I have created.</Description>
+            <PortfolioName data-aos="fade-up" >Portfolio<span></span></PortfolioName>
+            <Description data-aos="fade-up" >Below are some projects I have created.</Description>
             <ProjectsContainer>
               {/* PROJECT #1 */}
                 <Project data-aos="fade-up">

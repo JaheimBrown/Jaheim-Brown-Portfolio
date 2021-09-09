@@ -4,11 +4,8 @@ import { BgColor, SecondaryBg } from '../Global';
 export const FooterSection = styled.footer`
     background-color: #1E1E29;
     color: #fff;
-    height: 50px;
-
-    @media screen and (max-width: 540px) {
-        height: auto;
-    }
+    height: 60px;
+    width: 100%;
 `;
 
 export const  FooterConatiner = styled.div`
@@ -16,10 +13,13 @@ export const  FooterConatiner = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    width: 100%;
     max-width: 1300px;
-    margin: 0 5%;
+    padding: 20px;
+    margin: 0 auto;
+    z-index: 5;
 
-    p { font-size: clamp(.75rem, 1vw, 1.125rem); }
+    p { font-size: clamp(14px, 2vw, 16px); }
 
     @media screen and (max-width: 540px) {
         flex-direction: column;
