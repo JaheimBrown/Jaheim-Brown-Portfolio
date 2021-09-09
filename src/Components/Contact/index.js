@@ -15,11 +15,11 @@ const Contact = () => {
     const thankYou = <Link to='/ThankYou'></Link>;
 
     return (
-        <ContactSection id='contact' data-aos="fade-up">
-            <ContactHeading>Contact<span></span></ContactHeading>
-            <ContactDescription>Plese submit the form below so that I can get back to you as soon as possible.</ContactDescription>
+        <ContactSection id='contact'>
+            <ContactHeading data-aos="fade-up" >Contact<span></span></ContactHeading>
+            <ContactDescription data-aos="fade-up" >Plese submit the form below so that I can get back to you as soon as possible.</ContactDescription>
 
-            <form action="https://formsubmit.co/jaheimcbrown@gmail.com" method="POST">
+            <form  data-aos="fade-up" action="https://formsubmit.co/jaheimcbrown@gmail.com" method="POST">
                 <input type="hidden" name="_captcha" value="false"></input>
                 <input type="hidden" name="_next" value='https://jaheim-brown-portfolio.hostman.site/ThankYou'/>
                 <div>

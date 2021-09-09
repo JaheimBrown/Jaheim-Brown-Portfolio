@@ -20,10 +20,17 @@ export const GlobalStyle = createGlobalStyle`
 body {
   background-color: ${BgColor};
   color: #fff;
+  overflow-x: hidden;
 }
 
 abbr{
   text-decoration: none;
+}
+
+p {
+  font-size: clamp(14px, 2vw, 18px);
+  line-height: 1.9rem;
+  color: #f2f2f2;
 }
 
 /* Activation Classes */
@@ -66,9 +73,9 @@ transition: all .5s ease-in-out;
     }
 }
 
-.rel{
-  position: relative;
-  z-index: 10;
-  transition: all .3s ease-in-out;
+// Helpers
+.spacing {
+  margin: 20px 0;
 }
 `;
+

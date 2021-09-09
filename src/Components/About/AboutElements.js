@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { PrimaryColor, SecondaryColor, ParaCol } from '../Global';
+import { PrimaryColor, SecondaryColor, ParaCol, BgColor } from '../Global';
 
 
 export const AboutSection = styled.section`
     max-width: 1300px;
-    height: auto;
-    margin: 0 auto 3em auto; 
+    min-height: 100vh;
+    margin: 3em auto; 
 
     @media screen and (max-width: 720px) {
             width: auto;
@@ -15,7 +15,7 @@ export const AboutSection = styled.section`
     export const SectionName = styled.h1`
         font-size: 2em;
         color: ${PrimaryColor};
-        margin: 0 auto 15px 5%;
+        padding: 0 20px;
         text-align: center;
         position: relative;
         display: inline-block;
@@ -27,14 +27,15 @@ export const AboutSection = styled.section`
             background-color: ${SecondaryColor};
             position: absolute;
             bottom: -5px;
-            left: 0;
+            left: 20px;
         }
     `;
 
     export const AboutDescription = styled.p`
+        width: 100%;
         font-size: 1rem;
         color: #f2f2f2;
-        margin: 0 0 1rem 5%;
+        padding: 10px 20px;
     `;
 
     // Bio Container Items
@@ -57,10 +58,11 @@ export const AboutImage = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 10px;
 
             img{
-                width: 350px;
-                height: 350px;
+                width: 355px;
+                height: 355px;
                 @media screen and (max-width: 900px) {
                     position: relative;
                     left: 20px;
@@ -120,32 +122,7 @@ export const AboutImage = styled.div`
         line-height: 50px;
         padding: .5rem 2rem;    
         border-left: 1px solid #8C8989;
-
-        @media screen and (max-width: 900px) {
-            width: 450px;
-        }
-
-        @media screen and (max-width: 720px) {
-            width: 375px;
-            padding: .5rem 1rem
-        }
-
-        /* SURFACE DUO */
-        @media screen and (max-width: 540px) {
-            width: 485px;
-        }
-
-        @media screen and (max-width: 415px) {
-            width: 390px;
-        }
-
-        @media screen and (max-width: 375px) {
-            width: 350px;
-        }
-
-        @media screen and (max-width: 320px) {
-            width: 300px;
-        }
+        width: 100%;
     `;
 
  export const BioClosing = styled(BioHeading)`
@@ -234,4 +211,27 @@ export const AboutImage = styled.div`
                     }
                 }
             }            
-    `;
+`;
+
+export const ResButton = styled.a`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(14px, 2vw, 16px);
+    width: 225px;
+    padding: 10px 25px;
+    margin: 20px auto;
+    border: 1px solid ${ParaCol};
+    color: ${ParaCol};
+    border-radius: 20px;
+    text-decoration: none;
+    opacity: .9;
+    transition: .3s linear;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+        background-color: #f2f2f2;
+        color: ${BgColor};
+    }
+`;
