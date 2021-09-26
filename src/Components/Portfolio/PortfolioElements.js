@@ -75,6 +75,7 @@ export const Project = styled.div`
 export const ProjectImage1 = styled.span`
   grid-column: 1/2;
   background-repeat: no-repeat;
+  background-size: cover;
   object-fit: cover;
   background-position: center;
   overflow: hidden;
