@@ -8,6 +8,7 @@ import project1 from '../../assets/projects/project1.png';
 import project2 from '../../assets/projects/project2.png';
 import project3 from '../../assets/projects/project3.png';
 import project4 from '../../assets/projects/project4.png';
+import project5 from '../../assets/projects/project5.png';
 
 // REACT ICONS
 import  { FaGlobe } from 'react-icons/fa';
@@ -105,6 +106,25 @@ const Portfolio = () => {
                         <ButtonContainer>
                           <PrimaryButton href='https://ecommerce-project.hostman.site/' target="_blank">View Live <FaGlobe style={{color: `${PrimaryColor}`, marginLeft: '5px'}} /></PrimaryButton>
                           <SecButton href='https://github.com/KxngJ/Ecommerce-Project' target="_blank"> Code <FiCode style={{color: `${PrimaryColor}`, marginLeft: '5px'}} /></SecButton>
+                        </ButtonContainer>
+                    </ProjectDescription>
+                </Project>
+                 {/* PROJECT #5 */}
+                 <Project data-aos="fade-up">
+                    <ProjectImage1 style= {{ backgroundImage: `url(${project5})` , backgroundPosition: 'left -65px'}} ></ProjectImage1>
+                    <ProjectDescription>
+                        <ProjectName>Weather Forecast</ProjectName>
+                        <p>This is a small weather forecast project created using the MetaWeather api.</p>
+                        <TechUsed>
+                            <h3>Tech Used</h3>
+                            <ul>
+                                <li><abbr title='Technologies Used'>REACT</abbr></li>
+                                <li><abbr title='Technologies Used'>Styled-Components</abbr></li>
+                            </ul>
+                        </TechUsed>
+                        <ButtonContainer>
+                          <PrimaryButton href='https://weather-web-app.hostman.site/' target="_blank">View Live <FaGlobe style={{color: `${PrimaryColor}`, marginLeft: '5px'}} /></PrimaryButton>
+                          <SecButton href='https://github.com/KxngJ/Weather-Web-App' target="_blank"> Code <FiCode style={{color: `${PrimaryColor}`, marginLeft: '5px'}} /></SecButton>
                         </ButtonContainer>
                     </ProjectDescription>
                 </Project>
